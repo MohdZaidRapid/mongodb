@@ -2,7 +2,7 @@
 
 db.accounts.find({}).projection({}).sort({ _id: -1 }).limit(100);
 
-// find by client Id
+// find by client Id :"id"
 db.accounts
   .find({ clientId: "27809" })
   .projection({})
