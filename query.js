@@ -9,12 +9,12 @@ db.accounts
   .sort({ _id: -1 })
   .limit(3);
 
-// find between dates
+// find between dates 
 db.accounts
   .find({
     "linkedTo.date": {
-      $gte: ISODate("2023-06-11"),
-      $lte: ISODate("2024-06-11"),
+      $gte: new Date("2023-06-11"),
+      $lte: new Date("2024-06-11"),
     },
   })
   .projection({})
