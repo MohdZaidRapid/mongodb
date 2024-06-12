@@ -42,7 +42,7 @@ db.accounts
   .sort({ _id: -1 })
   .limit(100);
 
-// find where group have Vendor and Diesel
+// find where group have Vendor and Diesel 
 db.accounts
   .find({ $and: [{ group: "Vendor" }, { group: "Diesel" }] })
   .projection({})
@@ -108,7 +108,7 @@ db.accounts
   .sort({ _id: -1 })
   .limit(300);
 
-//
+// lvl value> accountID
 
 db.accounts
   .find({ $expr: { $gt: ["$lvl", "$accountId"] } }) //lvl >accountID
