@@ -21,7 +21,7 @@ db.accounts
   .sort({ _id: -1 })
   .limit(100);
 
-// find where predefined false or tds false
+// find where predefined false or tds false $or operator
 db.accounts
   .find({ $or: [{ predefined: false }, { tdsApply: false }] })
   .projection({})
