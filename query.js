@@ -28,7 +28,7 @@ db.accounts
   .sort({ _id: -1 })
   .limit(5);
 
-//   find where predefined false or tds false
+//   find where predefined false or tds false $operator
 db.accounts
   .find({ $and: [{ predefined: false }, { tdsApply: false }] })
   .projection({})
